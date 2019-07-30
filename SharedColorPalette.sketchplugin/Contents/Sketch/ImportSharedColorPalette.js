@@ -22,9 +22,9 @@ var onRun = function(context) {
 
   //create panel for user to select file
   var open = NSOpenPanel.openPanel();
-  var fileTypes = [NSArray arrayWithObjects:@"json",nil];
+  //var fileTypes = [NSArray arrayWithObjects:@"json",nil];
 
-  open.setAllowedFileTypes(fileTypes);
+  //open.setAllowedFileTypes(fileTypes);
   open.setCanChooseDirectories(true);
   open.setCanChooseFiles(true);
   open.setCanCreateDirectories(true);
@@ -68,14 +68,14 @@ function updateSharedStyles(doc, sharedStyles, palette, existingStyles, filePath
       }
 
       //clear out the existing document colors
-      doc.sketchObject.documentData().assets().setColors([]);
+      doc.sketchObject.documentData().assets().colors;
 
       //create a color variable out of the colorValue so we can add it to the color array
       var color = colorFromString(colorValue);
       documentColors.push(color);
 
       //set the documents colors with the imported colors
-      doc.sketchObject.documentData().assets().setColors(documentColors);
+      doc.sketchObject.documentData().assets().colors;
 
       if(colorExists == false){
 
@@ -144,7 +144,7 @@ function updateAllExistingStyles(doc, styleID, sharedStyles, index){
 				//reference each layer of each artboard
 				var layer = layers[k];
 				//get the objectID of the shared style
-				var objectID = layer.style().sharedObjectID();
+				var objectID = layer.style().sharedObjectID;
         //get the existing shared style
         var style = sharedStyles.objects().objectAtIndex(index);
 
