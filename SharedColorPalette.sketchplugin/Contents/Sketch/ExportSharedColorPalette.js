@@ -15,13 +15,13 @@ var onRun = function(context) {
   var numberOfSharedStyles = Number(sharedStyles.numberOfSharedStyles());
 
   //allow json to be written to the folder
-  var fileTypes = [NSArray arrayWithObjects:@"json", nil];
+  //var fileTypes = [NSArray arrayWithObjects:@"json", nil];
 
   //create select folder window to save the file
   var panel = [NSSavePanel savePanel];
   [panel setCanChooseDirectories:true];
   [panel setCanCreateDirectories:true];
-  [panel setAllowedFileTypes:fileTypes];
+  //[panel setAllowedFileTypes:fileTypes];
   [panel setNameFieldStringValue:documentName+".json"];
 
   //the text on the button in the panel
